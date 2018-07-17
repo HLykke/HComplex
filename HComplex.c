@@ -1,17 +1,20 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Complexm_avx.c
+ *       Filename:  HComplex.c
  *
- *    Description:  Complex multiplication using avx
+ *    Description:  AVX-optimized functions to process vectors of complex numbers.
  *
  *        Version:  1.0
- *        Created:  25. juni 2018 kl. 10.23 +0200
+ *        Created:  17. juli 2018 kl. 14.31 +0200
  *       Revision:  none
- *       Compiler:  gcc -mavx <source.c> -lfftw3f
+ *       Compiler:  If AVX2 supported CPU:
+ 						gcc -shared -mavx2 HComplex.c
+				else if only AVX supported CPU (Hmagnitude will not work):
+						gcc -mavx HComplex.c
  *
  *         Author:  Harald Lykke Joakimsen
- *   Organization:	Uit, the Arctic University of Norway
+ *   Organization:  UiT, the Arctic Univercity of Norway
  *
  * =====================================================================================
  */
