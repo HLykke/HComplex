@@ -149,8 +149,6 @@ float Hdot(float *a, float *b, const int n)
     return sum;
 }
 
-// AVX2 stuff
-
 #ifdef AVX2
 void Hmagnitude(float *dst, float *src, const int n)
 {
@@ -174,10 +172,8 @@ void Hmagnitude(float *dst, float *src, const int n)
 #endif
 
 int main() {
+	// Examples:
 	int n = 4;
-	//float *a = (float*)malloc(sizeof(float)*n);
-	//float *b = (float*)malloc(sizeof(float)*n);
-
 	float *real = (float*)malloc(n/2* sizeof(float));
 	float *imag = (float*)malloc(n/2* sizeof(float));
 	float *dst = (float*)calloc(n, sizeof(float));
